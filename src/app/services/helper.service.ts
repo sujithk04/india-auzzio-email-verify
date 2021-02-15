@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {DeviceDetectorService, DeviceInfo} from 'ngx-device-detector';
-import {HttpClient, HttpHeaders } from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
@@ -32,17 +32,17 @@ export class HelperServicesService {
     this.isDeskTopVar = this.deviceService.isDesktop();
     return this.isDeskTopVar;
   }
-  public emailVerify(emailId: string )
+  public emailVerify(verifyToken: string )
   {
     // Generate a header object
     let headers = new HttpHeaders();
     headers = headers.append("AuthRequired", "no");
-    headers = headers.append("email", emailId);
+    let reqParams =  new HttpParams({fromObject: { 'param': verifyToken, 'expr': '1622318400'}});
     // rest of the headers will be appended globally by http interceptors
     // Define a url for api end point
     const emailVerifyURL = "https://user.auzzio.com/user/email/verify";
     // return the http request
-    return this.http.get( emailVerifyURL, {headers: headers, observe: 'response'} ) ;
+    return this.http.post( emailVerifyURL, null, {headers: headers, params: reqParams, observe: 'response'} ) ;
    }
 
 }
