@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {DeviceDetectorService, DeviceInfo} from 'ngx-device-detector';
-import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
@@ -42,7 +42,7 @@ export class HelperServicesService {
     // Define a url for api end point
     const emailVerifyURL = 'https://user.auzzio.com/user/email/verify';
     // return the http request
-    return this.http.post(emailVerifyURL, null, {'headers', params: reqParams, observe: 'response'}) ;
+    return this.http.post(emailVerifyURL, null, {'headers': headers, params: reqParams, observe: 'response'}) ;
    }
 
 }
