@@ -18,13 +18,12 @@ export class EMailVerifyLinkComponent implements OnInit {
               private matSnackBar:  MatSnackBar) { }
 
   ngOnInit(): void {
- this.router.navigate([this.router.url]);
-
+  this.router.navigate([this.router.url]);
  const id = this.actRoute.snapshot.params.verifykey;
  console.log(id);
 
 this.utilityServices.emailVerify(id).subscribe(() => {
-  
+
       const message = "Email is verified.";
      this.matSnackBar.open(message, "dismiss", { duration: 4000, verticalPosition: 'bottom', panelClass: ['green-snackbar'] });
 
