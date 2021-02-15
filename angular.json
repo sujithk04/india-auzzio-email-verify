@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "india-auzzio-email-verify"
+  "defaultProject": "india-auzzio-email-verify",
+  "cli": {
+    "analytics": false
+  }
 }
