@@ -9,6 +9,7 @@ import {HelperServicesService} from "./services/helper.service";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
+import {HttpRequestInterceptor} from './HTTPInterceptor/HttpRequestInterceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,11 @@ import {MatButtonModule} from "@angular/material/button";
     MatCardModule,
     MatButtonModule
   ],
-  providers: [HelperServicesService],
+  providers: [HelperServicesService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpRequestInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
