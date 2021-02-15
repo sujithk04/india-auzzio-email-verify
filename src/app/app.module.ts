@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EMailVerifyLinkComponent } from './email-verify-link/email-verify-link.component';
+import {HelperServicesService} from "./services/helper.service";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { EMailVerifyLinkComponent } from './email-verify-link/email-verify-link.
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [HelperServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
