@@ -12,6 +12,8 @@ import {Subscription} from "rxjs";
 export class EMailVerifyLinkComponent implements OnInit, AfterViewInit {
   public emailVerifySubscription: Subscription;
   private emailVerifyToken: string;
+  public emailVerified: boolean;
+
   constructor(private verificationAction: HelperServicesService,
               private router: Router,
               private actRoute: ActivatedRoute,
@@ -24,15 +26,18 @@ export class EMailVerifyLinkComponent implements OnInit, AfterViewInit {
     console.log(id);
     // Assign the route parameter as email verification token here
     this.emailVerifyToken =  id;
+    this.emailVerified =  false;
 }
 
   ngAfterViewInit(): void {
  this.emailVerifySubscription = this.verificationAction.emailVerify(this.emailVerifyToken).subscribe(
    (data) => {
+     this.emailVerified = true;
      const successMessage = "Email has been verified successfully";
      this.matSnackBar.open(successMessage, "Dismiss", { duration: 3000, panelClass: ['green-snackbar'] })
   },
    (err) => {
+     this.emailVerified = false;
      const failureMessage = "Email verification failed";
      this.matSnackBar.open(failureMessage, "Dismiss", { duration: 3000, panelClass: ['red-snackbar'] })
    }

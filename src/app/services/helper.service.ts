@@ -42,7 +42,7 @@ export class HelperServicesService {
     // Define a url for api end point
     const emailVerifyURL = "https://user.auzzio.com/user/email/verify";
     // return the http request
-    return this.http.post( emailVerifyURL, null, {headers: headers, params: reqParams, observe: 'response'} ) ;
+    return this.http.post(emailVerifyURL, null, {headers: headers, params: reqParams, observe: 'response'}) ;
    }
 
 }

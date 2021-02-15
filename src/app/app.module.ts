@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EMailVerifyLinkComponent } from './email-verify-link/email-verify-link.component';
 import {HelperServicesService} from "./services/helper.service";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     AppRoutingModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [HelperServicesService],
   bootstrap: [AppComponent]
