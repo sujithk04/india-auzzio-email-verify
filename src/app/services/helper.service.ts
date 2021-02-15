@@ -36,13 +36,13 @@ export class HelperServicesService {
   {
     // Generate a header object
     let headers = new HttpHeaders();
-    headers = headers.append("AuthRequired", "no");
-    let reqParams =  new HttpParams({fromObject: { 'param': verifyToken, 'expr': '1622318400'}});
+    headers = headers.append('AuthRequired', 'no');
+    let reqParams =  new HttpParams({fromObject: { 'param': verifyToken}});
     // rest of the headers will be appended globally by http interceptors
     // Define a url for api end point
-    const emailVerifyURL = "https://user.auzzio.com/user/email/verify";
+    const emailVerifyURL = 'https://user.auzzio.com/user/email/verify';
     // return the http request
-    return this.http.post(emailVerifyURL, null, {headers: headers, params: reqParams, observe: 'response'}) ;
+    return this.http.post(emailVerifyURL, null, {'headers', params: reqParams, observe: 'response'}) ;
    }
 
 }
