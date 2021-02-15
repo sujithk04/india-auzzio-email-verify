@@ -21,7 +21,6 @@ export class EMailVerifyLinkComponent implements OnInit {
   this.router.navigate([this.router.url]);
  const id = this.actRoute.snapshot.params.verifykey;
  console.log(id);
-
 this.utilityServices.emailVerify(id).subscribe(() => {
 
       const message = "Email is verified.";
