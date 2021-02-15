@@ -1,16 +1,17 @@
 <div class="ui-grid">
-<mat-card>
-
-</mat-card>
-
-
-
-
-
-
-
-
-
-
-
+  <div class="ui-g-offset-4 ui-g-4 ui-sm-offset-1 ui-sm-10">
+     <img [src]="emailVerified?imageUrlSuccess:imageUrlFailure" [style]="isMobileVar?'width:60%;height:30%; padding:20% 20%;':'width:60%;height:10%; padding:10% 20%;'">
+      <div class="ui-g-12 ui-sm-12" align="center"  >
+        <mat-card-title style="font-family: 'Roboto', sans-serif; color: #606060">{{EmailVerificationResult}}</mat-card-title>
+      </div>
+    <div class="ui-g-12 ui-sm-12" align="center">
+      <mat-card-subtitle style="font-family:'Nunito Sans', sans-serif; color: #606060">
+        {{EmailVerificationExplanation}}
+      </mat-card-subtitle>
+    </div>
+    <button mat-raised-button type="button" [class]="isMobileVar?'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style-mobile':'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style' "
+            [style]="isMobileVar?'width: 100%;': 'width:60%;margin:10% 20%'">
+      <p [class]="isMobileVar?'button-label-mobile': 'button-label'">Log in</p>
+    </button>
+</div>
 </div>

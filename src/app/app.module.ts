@@ -8,6 +8,7 @@ import { EMailVerifyLinkComponent } from './email-verify-link/email-verify-link.
 import {HelperServicesService} from "./services/helper.service";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {MatCardModule} from "@angular/material/card";
     MatSnackBarModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [HelperServicesService],
   bootstrap: [AppComponent]

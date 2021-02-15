@@ -10,3 +10,40 @@ body { margin: 0; font-family: "Nunito Sans", sans-serif; }
   background: #FF0000;
   font-family: 'Nunito Sans', sans-serif;
 }
+.mat-card-header .mat-card-header-text {
+  margin: 0 0;
+}
+.button-label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: .7vw;
+  letter-spacing: normal;
+  text-align: center;
+  vertical-align: middle;
+  color: #e6dbdb;
+}
+.button-style{
+  background-color:#084CAE;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.button-style-mobile {
+  background-color:#084CAE;
+  border-radius: 5px;
+  color: white;
+  width: 4vw;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.button-label-mobile {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3vw;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #e6dbdb;
+}
