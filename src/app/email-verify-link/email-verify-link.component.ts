@@ -9,7 +9,7 @@ import {Subscription} from "rxjs";
   templateUrl: './email-verify-link.component.html',
   styleUrls: ['./email-verify-link.component.css']
 })
-export class EMailVerifyLinkComponent implements OnInit {
+export class EMailVerifyLinkComponent implements OnInit, AfterViewInit {
   public emailVerifySubscription: Subscription;
   private emailVerifyToken: string;
   constructor(private verificationAction: HelperServicesService,
@@ -26,7 +26,7 @@ export class EMailVerifyLinkComponent implements OnInit {
     this.emailVerifyToken =  id;
 }
 
-ngAfterViewInit(){
+  ngAfterViewInit(): void {
  this.emailVerifySubscription = this.verificationAction.emailVerify(this.emailVerifyToken).subscribe(
    (data) => {
      const successMessage = "Email has been verified successfully";
@@ -34,7 +34,7 @@ ngAfterViewInit(){
   },
    (err) => {
      const failureMessage = "Email verification failed";
-     this.matSnackBar.open(failureMessage, "Dismiss", { duration: 3000, panelClass: ['green-snackbar'] })
+     this.matSnackBar.open(failureMessage, "Dismiss", { duration: 3000, panelClass: ['red-snackbar'] })
    }
  )
   }
