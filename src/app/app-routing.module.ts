@@ -5,8 +5,8 @@ import {AppComponent} from './app.component';
 
 
 const routes: Routes = [
-  { path: 'verify/:verifykey', component: EMailVerifyLinkComponent},
-  { path: '', redirectTo: '/verify/:verifykey', pathMatch: 'full' },
+  { path: 'soon', component: EMailVerifyLinkComponent},
+  { path: '', redirectTo: '/soon', pathMatch: 'full' },
   { path: '**', component: AppComponent }
 
 ];
