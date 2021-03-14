@@ -32,7 +32,7 @@ export class EMailVerifyLinkComponent implements OnInit {
     this.emailVerifyToken =  id;
     this.emailVerified =  false;
     this.EmailVerificationResult = '';
-    this.imgUrl = '../assets/images/coming-sooon.svg';
+    this.imgUrl = '../../assets/images/coming-sooon.svg';
 }
 
 }
