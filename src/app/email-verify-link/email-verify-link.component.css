@@ -13,6 +13,7 @@
   margin: 8px 6px;
 }
 
+
 .fa:hover {
   opacity: 0.7;
 }
@@ -45,6 +46,16 @@
 .drag-down{
   margin-top: 75vh;
   margin-bottom: 20vh;
+}
+.drag-down-mobile{
+  margin-top: 75vh;
+  margin-bottom: 21vh;
+}
+.bg-image-mobile{
+  background-image: url('../../assets/images/cs.svg');
+  background-repeat: no-repeat;
+  background-size:contain;
+  position: relative;
 }
 
 svg {width: 100%; height: auto;}

@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <div  class="ui-g-12 ui-lg-12 bg-image">
+  <div  *ngIf="!isMobileVar" class="ui-g-12 ui-lg-12 ui-md-12 bg-image">
 
    <div class="ui-g-4 ui-g-offset-8 drag-down"  style="height: 1vh;">
      <p class="fa" style="font-family: 'Nunito Sans', sans-serif;font-size: .9vw;font-weight: 400;">Follow us on</p>
@@ -14,6 +14,19 @@
 
 
   </div>
+
+<div  *ngIf="isMobileVar" class="ui-g-12 ui-sm-12 bg-image-mobile">
+
+  <div class="ui-g-11 ui-sm-10 ui-sm-offset-2 drag-down-mobile"  style="height: 1vh;">
+    <p class="fa" style="font-family: 'Nunito Sans', sans-serif;font-size: 3vw;font-weight: 400;">Follow us on</p>
+    <a href="https://www.facebook.com/auzzio" target="_blank" class="fa fa-facebook" style="width: 25px"></a>
+    <a href="https://www.instagram.com/auzzio_in" target="_blank" class="fa fa-instagram"style="width: 25px"></a>
+    <a href="https://twitter.com/auzzio_in" target="_blank" class="fa fa-twitter"style="width: 25px"></a>
+    <a href="https://www.linkedin.com/company/auzzio-innovations-private-limited" class="fa fa-linkedin"style="width: 25px"></a>
+  </div>
+
+
+</div>
 
 
 
