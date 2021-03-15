@@ -1,11 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: "Nunito Sans", sans-serif; }
-.green-snackbar {
-  background: #016617;
-  font-family: 'Nunito Sans', sans-serif;
+body { margin: 0; font-family: "Nunito Sans", sans-serif;
+  background: #F8F8F8;
 }
+
 .red-snackbar {
   background: #FF0000;
   font-family: 'Nunito Sans', sans-serif;
@@ -13,37 +12,10 @@ body { margin: 0; font-family: "Nunito Sans", sans-serif; }
 .mat-card-header .mat-card-header-text {
   margin: 0 0;
 }
-.button-label {
-  font-family: 'Nunito Sans', sans-serif;
-  font-weight: 400;
-  font-stretch: normal;
-  font-style: normal;
-  font-size: .7vw;
-  letter-spacing: normal;
-  text-align: center;
-  vertical-align: middle;
-  color: #e6dbdb;
-}
-.button-style{
-  background-color:#084CAE;
-  border-radius: 5px;
-  color: white;
-  font-family: 'Nunito Sans', sans-serif;
+
+
+
+.ui-g-12,.ui-g-2, .ui-g-offset-9{
+  padding: 0;
 }
 
-.button-style-mobile {
-  background-color:#084CAE;
-  border-radius: 5px;
-  color: white;
-  width: 4vw;
-  font-family: 'Nunito Sans', sans-serif;
-}
-.button-label-mobile {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 3vw;
-  font-weight: 200;
-  font-stretch: normal;
-  font-style: normal;
-  text-align: center;
-  color: #e6dbdb;
-}
