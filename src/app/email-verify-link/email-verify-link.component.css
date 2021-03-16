@@ -71,8 +71,16 @@
 .bg-image-mobile{
   background-image: url('../../assets/images/cs.svg');
   background-repeat: no-repeat;
-  background-size:contain;
-  position: relative;
+  background-size:cover;
+  position: absolute;
+}
+.hd-image-mobile{
+  background-image: url('../../assets/images/new_logo.svg');
+  background-repeat: no-repeat;
+  
+  padding-left:2%;
+  
+ 
 }
 
 svg {width: 100%; height: auto;}
