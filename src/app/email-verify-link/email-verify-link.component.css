@@ -33,44 +33,48 @@
     color: white;
   }
   .hd-image{
-    background-image: url('../../assets/images/new_logo.svg');
+    
     background-repeat: no-repeat;
-
     position:absolute;
-    top: 30px;
-    left: 150px;
+    top: 25px;
+    left: 10px;
 
   }
 
   .bg-image{
-    background-image: url('../../assets/images/coming_soon_page.svg');
+    background-image: url('../../assets/images/new_group_desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
     height:100%;
+    position: relative;
+    
 
-    top: 0px;
-    left: 0px;
+  
   }
 
 .drag-down{
-  margin-top: 75vh;
+  margin-top: 80vh;
   margin-bottom: 8vh;
 
 }
 .drag-down-mobile{
-  margin-top: 75vh;
-  margin-bottom: 21vh;
+  margin-top: 80vh;
+  margin-bottom: 8vh;
 }
 .bg-image-mobile{
-  background-image: url('../../assets/images/nnnnnmmk.svg');
+  background-image: url('../../assets/images/mobile_view.svg');
   background-repeat: no-repeat;
   background-size:cover;
-  position: absolute;
+  height: 100%;
+  position: relative;
 }
 .hd-image-mobile{
   background-image: url('../../assets/images/new_logo.svg');
   background-repeat: no-repeat;
-  padding-left:2%;
+  position: absolute;
+  top: 25px;
+  left: 8px;
+
 
 
 }
