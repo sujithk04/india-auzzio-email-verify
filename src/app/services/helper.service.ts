@@ -39,7 +39,7 @@ export class HelperServicesService {
     const reqParams =  new HttpParams({fromObject: { 'param': verifyToken ,'expr':verifyExpr}});
     // rest of the headers will be appended globally by http interceptors
     // Define a url for api end point
-    const emailVerifyURL = 'https:/provider.auzzio.com/email/verify';
+    const emailVerifyURL = 'https://provider.auzzio.com/email/verify';
     // return the http request
     return this.http.post(emailVerifyURL, null, {'headers': headers, params: reqParams, observe: 'response'}) ;
    }
