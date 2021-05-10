@@ -29,9 +29,11 @@ export class EMailVerifyLinkComponent implements OnInit {
     this.isMobileVar = this.verificationAction.isMobile();
     this.router.navigate([this.router.url]).then(r => console.log(r));
     const id = this.actRoute.snapshot.params.verifykey;
+    const expryTime = this.actRoute.snapshot.params.linkExpry;
     console.log(id);
     // Assign the route parameter as email verification token here
     this.emailVerifyToken =  id;
+    
     this.emailVerified =  false;
     this.EmailVerificationResult = '';
     this.invokeVerifyEmail();

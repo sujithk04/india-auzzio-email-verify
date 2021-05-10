@@ -32,11 +32,11 @@ export class HelperServicesService {
     this.isDeskTopVar = this.deviceService.isDesktop();
     return this.isDeskTopVar;
   }
-  public emailVerify(verifyToken: string ) {
+  public emailVerify(verifyToken: string  ) {
     // Generate a header object
     let headers = new HttpHeaders();
     headers = headers.append('AuthRequired', 'no');
-    const reqParams =  new HttpParams({fromObject: { 'param': verifyToken}});
+    const reqParams =  new HttpParams({fromObject: { 'param': verifyToken }});
     // rest of the headers will be appended globally by http interceptors
     // Define a url for api end point
     const emailVerifyURL = 'https:/provider.auzzio.com/email/verify';
