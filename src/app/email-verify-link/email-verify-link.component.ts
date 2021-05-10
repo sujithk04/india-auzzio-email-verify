@@ -44,12 +44,21 @@ export class EMailVerifyLinkComponent implements OnInit {
   invokeVerifyEmail() {
  this.emailVerifySubscription = this.verificationAction.emailVerify(this.emailVerifyToken ,this.emailVerifyExpr) .subscribe(
    (data) => {
+     if (data.body['status'] === 200 && data.body['status_text'] ==='Email verified' ) {
      this.emailVerified = true;
      this.imageUrlSuccess  = './assets/images/email_verify_success.svg';
      const successMessage = 'Email has been verified successfully';
      this.EmailVerificationResult = 'Email has been verified successfully';
      this.EmailVerificationExplanation = 'Email has been verified successfully';
-     this.matSnackBar.open(successMessage, 'Dismiss', { duration: 3000, panelClass: ['green-snackbar'] });
+     this.matSnackBar.open(successMessage, 'Dismiss', { duration: 3000, panelClass: ['green-snackbar'] });}
+     else {
+       this.emailVerified = false;
+       const failureMessage = 'Email verification failed';
+       this.EmailVerificationResult = 'Email verification failed';
+       this.EmailVerificationExplanation = 'We could not verify your email. Please try later.';
+       this.imageUrlFailure = './assets/images/email_verify_fail.svg';
+       this.matSnackBar.open(failureMessage, 'Dismiss', { duration: 3000, panelClass: ['red-snackbar'] });
+     }
   },
    (err) => {
      this.emailVerified = false;
