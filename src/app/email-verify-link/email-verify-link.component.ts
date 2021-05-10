@@ -19,7 +19,7 @@ export class EMailVerifyLinkComponent implements OnInit {
   public EmailVerificationResult: string;
   public EmailVerificationExplanation: string;
   public isMobileVar: boolean;
-  public emailVerifyExpr: string;
+  public emailVerifyExpr: number;
   constructor(private verificationAction: HelperServicesService,
               private router: Router,
               private actRoute: ActivatedRoute,
@@ -30,7 +30,7 @@ export class EMailVerifyLinkComponent implements OnInit {
     this.isMobileVar = this.verificationAction.isMobile();
     this.router.navigate([this.router.url]).then(r => console.log(r));
     const id = this.actRoute.snapshot.params.verifykey;
-    const expryTime = this.actRoute.snapshot.expr.linkExpry;
+    const expryTime = this.actRoute.snapshot.intexpr.linkExpry;
     console.log(id);
     // Assign the route parameter as email verification token here
     this.emailVerifyToken =  id;
@@ -41,7 +41,7 @@ export class EMailVerifyLinkComponent implements OnInit {
 }
 
   invokeVerifyEmail() {
- this.emailVerifySubscription = this.verificationAction.emailVerify(this.emailVerifyToken ,this.emailVerifyExpr) .subscribe(
+ this.emailVerifySubscription = this.verificationAction.emailVerify(this.emailVerifyToken ,'this.emailVerifyExpr') .subscribe(
    (data) => {
      this.emailVerified = true;
      this.imageUrlSuccess  = './assets/images/email_verify_success.svg';
