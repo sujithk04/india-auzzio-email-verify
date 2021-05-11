@@ -20,6 +20,8 @@ export class EMailVerifyLinkComponent implements OnInit {
   public EmailVerificationExplanation: string;
   public isMobileVar: boolean;
   public emailVerifyExpr: string;
+  public isDeskTopVar: boolean;
+  public isTabletVar: boolean;
   constructor(private verificationAction: HelperServicesService,
               private router: Router,
               private actRoute: ActivatedRoute,
@@ -28,6 +30,10 @@ export class EMailVerifyLinkComponent implements OnInit {
 
   ngOnInit(): void {
     this.isMobileVar = this.verificationAction.isMobile();
+    this.router.navigate([this.router.url]).then(r => console.log(r));
+    this.isDeskTopVar = this.verificationAction.isDesktop();
+    this.router.navigate([this.router.url]).then(r => console.log(r));
+    this.isTabletVar = this.verificationAction.isTablet();
     this.router.navigate([this.router.url]).then(r => console.log(r));
     const id = this.actRoute.snapshot.params.verifykey;
     const expryTime = this.actRoute.snapshot.params.linkExpry;
