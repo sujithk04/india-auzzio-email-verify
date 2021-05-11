@@ -1,21 +1,63 @@
-
-<div class="ui-grid">
-   <div class="ui-g-offset-4 ui-g-4 ui-sm-offset-1 ui-sm-10">
-     <img [src]="emailVerified?imageUrlSuccess:imageUrlFailure" [style]="isMobileVar?'width:60%;height:30%; padding:20% 20%;':'width:60%;height:10%; padding:10% 20%;'">
-      <div class="ui-g-12 ui-sm-12" align="center"  >
-        <mat-card-title style="font-family: 'Roboto', sans-serif; color: #606060">{{EmailVerificationResult}}</mat-card-title>
-      </div>
-    <div class="ui-g-12 ui-sm-12" align="center">
-      <mat-card-subtitle style="font-family:'Nunito Sans', sans-serif; color: #606060">
-        {{EmailVerificationExplanation}}
-      </mat-card-subtitle>
+<div *ngIF="isDesktopvar">
+  <div class="ui-grid">
+    <div class="ui-g-offset-4 ui-g-4 ui-sm-offset-1 ui-sm-10">
+      <img [src]="emailVerified?imageUrlSuccess:imageUrlFailure" [style]="isMobileVar?'width:60%;height:30%; padding:20% 20%;':'width:60%;height:10%; padding:10% 20%;'">
+       <div class="ui-g-12 ui-sm-12" align="center"  >
+         <mat-card-title style="font-family: 'Roboto', sans-serif; color: #606060">{{EmailVerificationResult}}</mat-card-title>
+       </div>
+     <div class="ui-g-12 ui-sm-12" align="center">
+       <mat-card-subtitle style="font-family:'Nunito Sans', sans-serif; color: #606060">
+         {{EmailVerificationExplanation}}
+       </mat-card-subtitle>
+     </div>
+     <button mat-raised-button type="button" [class]="isMobileVar?'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style-mobile':'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style' "
+             [style]="isMobileVar?'width: 100%;': 'width:60%;margin:10% 20%'">
+       <p [class]="isMobileVar?'button-label-mobile': 'button-label'"> 
+       <a href="https://ours.auzzio.com/provider/login" class="button-label">Log in</a>
+       </p>
+     </button>
     </div>
-    <button mat-raised-button type="button" [class]="isMobileVar?'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style-mobile':'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style' "
-            [style]="isMobileVar?'width: 100%;': 'width:60%;margin:10% 20%'">
-      <p [class]="isMobileVar?'button-label-mobile': 'button-label'"> 
-      <a href="https://ours.auzzio.com/provider/login" class="button-label">Log in</a>
-      </p>
-    </button>
    </div>
-  </div>
-
+</div>
+<div *ngIF="isTabletvar">
+   <div class="ui-grid">
+     <div class="ui-g-offset-4 ui-g-4 ui-sm-offset-1 ui-sm-10">
+       <img [src]="emailVerified?imageUrlSuccess:imageUrlFailure" [style]="isMobileVar?'width:60%;height:30%; padding:20% 20%;':'width:60%;height:10%; padding:10% 20%;'">
+        <div class="ui-g-12 ui-sm-12" align="center"  >
+          <mat-card-title style="font-family: 'Roboto', sans-serif; color: #606060">{{EmailVerificationResult}}</mat-card-title>
+        </div>
+      <div class="ui-g-12 ui-sm-12" align="center">
+        <mat-card-subtitle style="font-family:'Nunito Sans', sans-serif; color: #606060">
+          {{EmailVerificationExplanation}}
+        </mat-card-subtitle>
+      </div>
+      <button mat-raised-button type="button" [class]="isMobileVar?'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style-mobile':'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style' "
+              [style]="isMobileVar?'width: 100%;': 'width:60%;margin:10% 20%'">
+        <p [class]="isMobileVar?'button-label-mobile': 'button-label'"> 
+        <a href="https://ours.auzzio.com/provider/login" class="button-label">Log in</a>
+        </p>
+      </button>
+     </div>
+    </div>
+</div>
+<div *ngIF="isMobilevar">
+   <div class="ui-grid">
+     <div class="ui-g-offset-4 ui-g-4 ui-sm-offset-1 ui-sm-10">
+       <img [src]="emailVerified?imageUrlSuccess:imageUrlFailure" [style]="isMobileVar?'width:60%;height:30%; padding:20% 20%;':'width:60%;height:10%; padding:10% 20%;'">
+        <div class="ui-g-12 ui-sm-12" align="center"  >
+          <mat-card-title style="font-family: 'Roboto', sans-serif; color: #606060">{{EmailVerificationResult}}</mat-card-title>
+        </div>
+      <div class="ui-g-12 ui-sm-12" align="center">
+        <mat-card-subtitle style="font-family:'Nunito Sans', sans-serif; color: #606060">
+          {{EmailVerificationExplanation}}
+        </mat-card-subtitle>
+      </div>
+      <button mat-raised-button type="button" [class]="isMobileVar?'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style-mobile':'ui-g-offset-4 ui-sm-offset-1 ui-g-4 ui-sm-10 button-style' "
+              [style]="isMobileVar?'width: 100%;': 'width:60%;margin:10% 20%'">
+        <p [class]="isMobileVar?'button-label-mobile': 'button-label'"> 
+        <a href="https://ours.auzzio.com/provider/login" class="button-label">Log in</a>
+        </p>
+      </button>
+     </div>
+    </div>
+</div>
